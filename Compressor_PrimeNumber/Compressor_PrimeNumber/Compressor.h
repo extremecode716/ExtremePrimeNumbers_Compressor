@@ -1,6 +1,6 @@
 #pragma once
 
-// 김동일 소수 압축.
+// ExtremeCode 소수 압축.
 // 소수들을 읽어 들이고 압축한다. 숫자 하나 당 8바이트일 때, 압축율 비교.
 // 메모리 기준.
 // 문자열로 압축시 : 1 바이트로 압축되며, 8배의 압축 효율이 나온다.
@@ -19,6 +19,7 @@
 // 64bit에서는 1.8E19. 즉, 20자리의 숫자를 표현할 수있다. mpir 라이브러리 사용할 것.
 // https://namu.wiki/w/RSA%20%EC%95%94%ED%98%B8%ED%99%94
 // https://www.dcode.fr/prime-number-pi-count   / https://ko.calcuworld.com/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4/%EB%B0%94%EC%9D%B4%ED%8A%B8-%EA%B3%84%EC%82%B0%EA%B8%B0/
+// http://www.primos.mat.br/2T_en.html // file data
 
 #include <vector>
 #include <string>
@@ -60,7 +61,7 @@ namespace KDI
 		std::vector<tPrime8> vecKDICompressionData; // KDI bit로 1차 압축
 		std::string			strCompression1;		// 문자 1차 압축
 		std::string			strCompression2;		// 문자 2차 압축
-													// .. more Compression
+													// .. more Compression -> .7zip etc...
 	public:
 		bool ReadFromFile( const char* _FileName, const char* _Mode = "r", const size_t _StartIndex = 0, const size_t _ReadCount = 0 );
 		bool KDICompression();

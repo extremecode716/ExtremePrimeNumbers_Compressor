@@ -1,5 +1,5 @@
 #include "Compressor.h"
-
+// ExtremeCode
 int main()
 {
 	KDI::CCompressor_PN compn;
